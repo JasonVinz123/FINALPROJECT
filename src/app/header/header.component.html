@@ -1,0 +1,82 @@
+<mat-toolbar color="orange" class="toolbar">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>B L U E L I G H T S</span>
+ 
+    <button mat-icon-button (click)="logout()" class="logout-button">
+        <mat-icon class="logout-icon">logout</mat-icon>
+    </button>
+    
+    <!-- Dark Mode Toggle Button -->
+    <button mat-icon-button (click)="toggleDarkMode()" class="dark-mode-toggle">
+        <mat-icon>{{ isDarkMode? 'brightness_2' : 'brightness_high' }}</mat-icon>
+    </button>
+    
+    <!-- Search Button -->
+    <button mat-icon-button (click)="openSearch()" class="search-button">
+        <mat-icon>search</mat-icon>
+    </button>
+    
+    <!-- Settings Button -->
+    <button mat-icon-button (click)="openSettings()" class="settings-button">
+        <mat-icon>settings</mat-icon>
+    </button>
+    
+    <!-- Change Password Button -->
+    <!-- Change Password Dropdown -->
+
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        <mat-icon>lock</mat-icon> 
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="#"  data-bs-toggle="modal" data-bs-target="#exampleModal">Change Password</a></li>
+    
+    </ul>
+  </div>
+    
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+<form class="row g-3">
+             
+                <div class="col-auto">
+                  <label for="inputOldPassword" class="visually-hidden">Curremt Password</label>
+                  <input type="password" class="form-control" id="inputPassword2" placeholder="Current Password">
+
+                  <label for="inputConfirmPassword2" class="visually-hidden">Confirm Password</label>
+                  <input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password">
+            
+                  <label for="inputNewPassword2" class="visually-hidden">New Password</label>
+                  <input type="password" class="form-control" id="inputPassword2" placeholder="New Password">
+
+
+
+                 
+                </div>
+               
+              </form>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Google Button -->
+    <button mat-icon-button (click)="googleAction()" class="google-button">
+        <mat-icon>g_translate</mat-icon> <!-- Using g_translate as a placeholder, replace with your preferred icon -->
+    </button>
+    
+</mat-toolbar>
